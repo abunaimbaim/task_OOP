@@ -72,33 +72,6 @@ class Lingkaran_Defri extends BangunDatar_Defri {
     }
 }
 
-/**
- * Menghitung bangun datar segitiga
- *
- * @param $alas
- * @param $tinggi
- *
- */
-class Segitiga_Defri extends BangunDatar_Defri {
-    private float $tinggi;
-    private float $alas;
-    function __construct($alas,$tinggi){
-        $this->alas = $alas;
-        $this->tinggi = $tinggi;
-    }
-    function luas(){
-        echo "Luas ". get_class(). " : ". (($this->alas * $this->tinggi) * .5). "\n";
-    }
-    function keliling(){
-        echo "Keliling ". get_class(). " : ". (sqrt(
-            pow($this->alas,2) + pow($this->tinggi,2)
-        ) + $this->alas + $this->tinggi). "\n";
-    }
-}
-
-// alas = 4
-// tinggi = 5 
-$segitiga = new Segitiga_Defri(10,10);
 
 // jari jari = 10
 $lingkaran = new Lingkaran_Defri(10);
@@ -110,13 +83,10 @@ $persegi = new Persegi_Defri(10);
 // lebar = 5
 $persegi_panjang = new PersegiPanjang_Defri(10,5);
 
-$segitiga->luas();
 $lingkaran->luas();
 $persegi->luas();
 $persegi_panjang->luas();
 
-
-$segitiga->keliling();
 $lingkaran->keliling();
 $persegi->keliling();
 $persegi_panjang->keliling();
